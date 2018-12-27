@@ -14,6 +14,7 @@ namespace Project_Euler_Problem.Problems
             Find the sum of all the multiples of 3 or 5 below 1000.
         */
 
+        // the limit parameter is what the sum must be under
         public int calculateSumOfMultiplesOf3And5(int limit)
         {
             int sum = 0;

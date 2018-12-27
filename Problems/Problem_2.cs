@@ -20,7 +20,7 @@ namespace Project_Euler_Problem.Problems
         int intF1 = 1;
         int intF2 = 1;
 
-        public void swtichValues(int intFirst, int intSecond)
+        public void switchValues(int intFirst, int intSecond)
         {
             // The second value now becomes the first...
             intF1 = intSecond;
@@ -31,17 +31,21 @@ namespace Project_Euler_Problem.Problems
 
         public int calcuateSumEvenNumbersOfFibonacciNumbers(int intLimit)
         {
+            // do the following as long as the sum of the two numbers are less than or equal to the limit
             while (intF1 + intF2 <= intLimit)
             {
                 if ((intF1 + intF2) % 2 == 0)
                 {
+                    // add the sum of the numbers...
                     intSumOfEvenNumberedValuesOfFibonacciNumbers += intF1 + intF2;
 
-                    swtichValues(intF1, intF2);
+                    // then switch the values, higher amount -> intF1,
+                    //  sum of two numbers -> intF2
+                    switchValues(intF1, intF2);
                 }
                 else
                 {
-                    swtichValues(intF1, intF2);
+                    switchValues(intF1, intF2);
                 }
             }
 
